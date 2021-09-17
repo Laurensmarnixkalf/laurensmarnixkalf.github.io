@@ -38,8 +38,9 @@ if (typeof(Ecwid) == 'object') {
   });
 }
 
-var radio = document.getElementById("form-control__radio---340967026");
-console.log(radio);
+document.addEventListener('DOMContentLoaded', function() {
+  console.log(document.getElementById('form-control__radio---340967026').textContent);
+});
 
 
 console.log("Hoi Fab, we kunnen aan de slag!");
