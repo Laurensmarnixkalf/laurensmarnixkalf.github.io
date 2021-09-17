@@ -1,4 +1,4 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+// <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 /* An HTML/Javascript code snippet for Ecwid to show/hide product options depending on a trigger(expander) option */
 if (typeof(Ecwid) == 'object') {
