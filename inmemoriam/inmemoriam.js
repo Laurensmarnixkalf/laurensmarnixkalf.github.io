@@ -37,6 +37,7 @@ if (typeof(Ecwid) == 'object') {
     });
   });
 }
+console.log("Hoi Fab, we kunnen aan de slag!");
 </script>
 
 // function to load jQuery
