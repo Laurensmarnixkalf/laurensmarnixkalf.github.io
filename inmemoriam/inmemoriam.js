@@ -39,7 +39,7 @@ if (typeof(Ecwid) == 'object') {
 }
 
 var radio = document.getElementById("form-control__radio---340967026");
-console.log(radio.value);
+console.log(radio);
 
 
 console.log("Hoi Fab, we kunnen aan de slag!");
