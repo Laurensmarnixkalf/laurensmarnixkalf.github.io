@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-console.log("Test commit");
+console.log("Hoi Fab, we kunnen aan de slag!");
 // </script>
 
 // function to load jQuery
