@@ -5,10 +5,8 @@ Ecwid.OnAPILoaded.add(function() {
   window.ec.storefront = window.ec.storefront || Object();
   window.ec.storefront.product_details_show_product_name = false; 
   Ecwid.refreshConfig();
-
-  console.log("testing query selector");
-  let paragraphs = document.querySelectorAll("p");
-  console.log(paragraphs);
+  
+  console.log(document.querySelector('.details-product-option--select .form-control--select select').value);
 
   console.log('testing jquery');
   var element = jQuery("div[class = form-control__select ]");
