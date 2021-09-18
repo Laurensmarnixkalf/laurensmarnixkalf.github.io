@@ -1,15 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-  console.log(document.getElementById("form-control__radio---340967026"));
-  console.log("Gebeurt er wel wat?");
+// document.addEventListener('DOMContentLoaded', function() {
+//   console.log(document.getElementById("form-control__radio---340967026"));
+//   console.log("Gebeurt er wel wat?");
+// });
+
+Ecwid.OnAPILoaded.add(function() {
+  console.log("Ecwid storefront JS API has loaded");
+
+  var element = document.querySelectorAll('[class="form-control__select"]');
+
+  console.log("element_foo");
+  console.log(element);
+  console.log("element.value_foo");
+  console.log(element.value);
+  console.log("Test ein zwei drei_foo");
 });
 
-var element = document.querySelectorAll('[class="form-control__select"]');
+// var element = document.querySelectorAll('[class="form-control__select"]');
 
-console.log("element");
-console.log(element);
-console.log("element.value");
-console.log(element.value);
-console.log("Test ein zwei drei");
+// console.log("element");
+// console.log(element);
+// console.log("element.value");
+// console.log(element.value);
+// console.log("Test ein zwei drei");
 
 // console.log("Hoi Fab, we kunnen aan de slag!");
 
