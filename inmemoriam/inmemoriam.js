@@ -3,7 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log("Gebeurt er wel wat?");
 });
 
+var element = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+
+console.log("element");
+console.log(element);
+console.log("element.value");
+console.log(element.value);
 console.log("Test ein zwei drei");
+
 // console.log("Hoi Fab, we kunnen aan de slag!");
 
 
