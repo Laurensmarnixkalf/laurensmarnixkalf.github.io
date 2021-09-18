@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log("Gebeurt er wel wat?");
 });
 
-var element = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+var element = document.querySelectorAll('[aria-label="Luxe kaartje / Rouwlint"]');
 
 console.log("element");
 console.log(element);
