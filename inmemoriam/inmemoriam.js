@@ -1,21 +1,12 @@
 Ecwid.OnAPILoaded.add(function() {
   console.log("Ecwid storefront JS API has loaded");
 
-  var element = document.querySelector('[aria-label="Luxe kaartje / Rouwlint"]');
+  // var element = document.querySelector('[aria-label="Luxe kaartje / Rouwlint"]');
 
-  console.log("element_foo2");
-  console.log(element);
-  console.log("element.value_foo2");
-  console.log(element.value);
-  console.log("Test ein zwei drei_foo2");
+  console.log(document);
 });
 
 // ______________________________________________________________
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   console.log(document.getElementById("form-control__radio---340967026"));
-//   console.log("Gebeurt er wel wat?");
-// });
 
 // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 // <script type="text/javascript">
