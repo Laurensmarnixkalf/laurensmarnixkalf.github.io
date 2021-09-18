@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log(document.getElementById('form-control__radio---340967026').value);
+  console.log(document.getElementById('form-control__radio---340967026').innerText);
 });
 
 console.log("Hoi Fab, we kunnen aan de slag!");
