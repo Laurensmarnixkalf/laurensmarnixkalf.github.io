@@ -5,6 +5,14 @@ Ecwid.OnAPILoaded.add(function() {
   console.log(document.body);
   console.log(document.head);
   console.log(document.forms);
+
+  console.log("testing query selector");
+  let paragraphs = document.querySelectorAll("p");
+  console.log(paragraphs);
+
+  console.log('testing jquery');
+  var element = jQuery("div[class = form-control__select ]");
+  console.log(element);
 });
 
 // ______________________________________________________________
