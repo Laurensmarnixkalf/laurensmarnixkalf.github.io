@@ -1,6 +1,12 @@
 Ecwid.OnAPILoaded.add(function() {
   console.log("Ecwid storefront JS API has loaded");
 
+  function WinLoad() {
+    // var ssio = document.getElementById('ssio');
+    console.log("inside winload");
+  }
+  window.onload = WinLoad;
+
   console.log(document);
 
   var element = document.getElementById("form-control__radio---340967026");
