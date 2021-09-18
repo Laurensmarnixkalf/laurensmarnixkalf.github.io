@@ -1,12 +1,10 @@
 Ecwid.OnAPILoaded.add(function() {
   console.log("Ecwid storefront JS API has loaded");
 
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("Inside DOMcontent loaded");
-    var element = document.querySelector('[aria-label="Luxe kaartje / Rouwlint"]');
-    console.log("element")
-    console.log(element);
-  });
+  console.log(document);
+
+  var element = document.getElementById("form-control__radio---340967026");
+  console.log(element);
 });
 
 // ______________________________________________________________
