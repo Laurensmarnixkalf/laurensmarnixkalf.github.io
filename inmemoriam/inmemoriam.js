@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log(document.getElementById("form-control__radio---340967026"));
+  console.log("Gebeurt er wel wat?");
 });
 
-console.log("Hoi Fab, we kunnen aan de slag!");
+// console.log("Hoi Fab, we kunnen aan de slag!");
 
 
 // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
