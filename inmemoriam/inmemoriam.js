@@ -1,10 +1,10 @@
 Ecwid.OnAPILoaded.add(function() {
   console.log("Ecwid storefront JS API has loaded");
 
-  console.log(document);
-  console.log(document.body);
-  console.log(document.head);
-  console.log(document.forms);
+  window.ec = window.ec || Object();
+  window.ec.storefront = window.ec.storefront || Object();
+  window.ec.storefront.product_details_show_product_name = FALSE; 
+  Ecwid.refreshConfig();
 
   console.log("testing query selector");
   let paragraphs = document.querySelectorAll("p");
