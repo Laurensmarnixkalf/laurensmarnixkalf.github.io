@@ -8,8 +8,17 @@ Ecwid.OnAPILoaded.add(function() {
   
   console.log("testing jquery");
   
-    let el = document.querySelector('input[name="Kleuren Luxe rouwlint*"]');
-    console.log(el);
+// Product details page is opened
+// Change value of select in DOM
+document.querySelector('.form-control__radio').value = 'XLarge';
+
+// At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
+// Send 'change' event to Ecwid to record the change
+document.querySelector('.form-control__radio').dispatchEvent(new Event('change'));
+
+// Now if a customer adds this product to cart, it will be added with this user selection
+  
+
  
   
   el.dispatchEvent(new Event('input', {bubbles:true, cancelable:true}));
