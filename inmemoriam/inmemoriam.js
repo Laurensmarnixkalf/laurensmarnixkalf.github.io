@@ -7,9 +7,11 @@ Ecwid.OnAPILoaded.add(function() {
 //   Ecwid.refreshConfig();
   
   console.log("testing jquery");
-  let el = document.querySelector('input[name="Kleuren Luxe rouwlint*"]');
   
-  console.log(el);
+  document.addEventListener("DOMContentLoaded", function() {
+    let el = document.querySelector('input[name="Kleuren Luxe rouwlint*"]');
+    console.log(el);
+  });
   
   console.log(document.querySelector('.details-product-option--select .form-control--select select'));
   
