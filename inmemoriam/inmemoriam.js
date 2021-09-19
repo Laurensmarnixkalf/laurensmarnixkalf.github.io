@@ -22,7 +22,9 @@ Ecwid.OnAPILoaded.add(function (page) {
   // var element = jQuery("div[class = form-control__select ]");
   // console.log(element);
 
-
+  console.log("testing");
+  console.log(page);
+  console.log(page.type);
   console.log("Current page is of type: " + page.type);
 
 
