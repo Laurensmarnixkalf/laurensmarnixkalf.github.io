@@ -7,7 +7,7 @@ Ecwid.OnAPILoaded.add(function() {
 //   Ecwid.refreshConfig();
   
   console.log("testing jquery");
-  console.log(document.querySelector('.details-product-option--select .form-control--select select').value);
+  console.log(document.querySelector('.details-product-option--select .form-control--select select'));
   
   // Product details page is opened
 // Change value of select in DOM
