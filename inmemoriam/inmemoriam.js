@@ -1,40 +1,39 @@
-Ecwid.OnAPILoaded.add(function() {
-  console.log("Ecwid storefront JS API has loaded");
+Ecwid.OnAPILoaded.add(function (page) {
+  // console.log("Ecwid storefront JS API has loaded");
+
+  // // Product details page is opened
+  // // Change value of select in DOM
+  // document.getElementById("form-control__radio---340967026").value = 'XLarge';
+
+  // // At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
+  // // Send 'change' event to Ecwid to record the change
+  // document.getElementById("form-control__radio---340967026").dispatchEvent(new Event('change'));
+
+  // // Now if a customer adds this product to cart, it will be added with this user selection  
+  // el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+
+  // Ecwid.OnPageLoaded.add(function (page) {
+  //   if (page.type == 'PRODUCT') {
+  //     console.log("Current page is of type: " + page.type);
+  //   }
+  // });
+  
+
+  // var element = jQuery("div[class = form-control__select ]");
+  // console.log(element);
+
+
+  console.log("Current page is of type: " + page.type);
+
+
+});
+
+// ______________________________________________________________
 
 //   window.ec = window.ec || Object();
 //   window.ec.storefront = window.ec.storefront || Object();
 //   window.ec.storefront.product_details_show_product_name = false; 
 //   Ecwid.refreshConfig();
-  
-  console.log("testing jquery");
-  
-// Product details page is opened
-// Change value of select in DOM
-document.getElementById("form-control__radio---340967026").value = 'XLarge';
-
-// At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
-// Send 'change' event to Ecwid to record the change
-document.getElementById("form-control__radio---340967026").dispatchEvent(new Event('change'));
-
-// Now if a customer adds this product to cart, it will be added with this user selection
-  
-
- 
-  
-  el.dispatchEvent(new Event('input', {bubbles:true, cancelable:true}));
-  
- Ecwid.OnPageLoaded.add(function(page){
-if (page.type == 'PRODUCT') {
-  	console.log("Current page is of type: " + page.type);
-}
-});
-
-  
-  var element = jQuery("div[class = form-control__select ]");
-  console.log(element);
-});
-
-// ______________________________________________________________
 
 // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 // <script type="text/javascript">
