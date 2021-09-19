@@ -1,10 +1,10 @@
 Ecwid.OnAPILoaded.add(function() {
   console.log("Ecwid storefront JS API has loaded");
 
-  window.ec = window.ec || Object();
-  window.ec.storefront = window.ec.storefront || Object();
-  window.ec.storefront.product_details_show_product_name = false; 
-  Ecwid.refreshConfig();
+//   window.ec = window.ec || Object();
+//   window.ec.storefront = window.ec.storefront || Object();
+//   window.ec.storefront.product_details_show_product_name = false; 
+//   Ecwid.refreshConfig();
   
   console.log("testing jquery");
   console.log(document.querySelector('.details-product-option--select .form-control--select select').value);
