@@ -7,7 +7,7 @@ Ecwid.OnAPILoaded.add(function() {
 //   Ecwid.refreshConfig();
   
   console.log("testing jquery");
-  let el = document.querySelector('input[class=".product-details-module .details-product-option .details-product-option--select .details-product-option--Luxe-kaartje-002f-Rouwlint002a"]');
+  let el = document.querySelector('input[name="Kleuren Luxe rouwlint*"]');
   
   console.log(el);
   
