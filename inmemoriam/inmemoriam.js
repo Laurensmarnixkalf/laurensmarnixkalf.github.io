@@ -23,9 +23,10 @@ Ecwid.OnAPILoaded.add(function (page) {
   // console.log(element);
 
   console.log("testing");
-  console.log(page);
-  console.log(page.type);
-  console.log("Current page is of type: " + page.type);
+  console.log(document);
+  console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
+  console.log(page.type); //page is undefined, hence error
+  console.log("Current page is of type: " + page.type); //page is undefined, hence error
 
 
 });
