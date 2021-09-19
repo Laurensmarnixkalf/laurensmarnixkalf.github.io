@@ -6,9 +6,20 @@ Ecwid.OnAPILoaded.add(function() {
   window.ec.storefront.product_details_show_product_name = false; 
   Ecwid.refreshConfig();
   
+  console.log("testing jquery");
   console.log(document.querySelector('.details-product-option--select .form-control--select select').value);
+  
+  // Product details page is opened
+// Change value of select in DOM
+document.querySelector('.details-product-option--select .form-control--select select').value = 'XLarge';
 
-  console.log('testing jquery');
+// At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
+// Send 'change' event to Ecwid to record the change
+document.querySelector('.details-product-option--select .form-control--select select').dispatchEvent(new Event('change'));
+
+// Now if a customer adds this product to cart, it will be added with this user selection
+
+  
   var element = jQuery("div[class = form-control__select ]");
   console.log(element);
 });
