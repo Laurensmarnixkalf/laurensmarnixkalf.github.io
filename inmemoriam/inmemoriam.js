@@ -1,35 +1,35 @@
-Ecwid.OnAPILoaded.add(function (page) {
-  // console.log("Ecwid storefront JS API has loaded");
+// Ecwid.OnAPILoaded.add(function (page) {
+//   // console.log("Ecwid storefront JS API has loaded");
 
-  // // Product details page is opened
-  // // Change value of select in DOM
-  // document.getElementById("form-control__radio---340967026").value = 'XLarge';
+//   // // Product details page is opened
+//   // // Change value of select in DOM
+//   // document.getElementById("form-control__radio---340967026").value = 'XLarge';
 
-  // // At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
-  // // Send 'change' event to Ecwid to record the change
-  // document.getElementById("form-control__radio---340967026").dispatchEvent(new Event('change'));
+//   // // At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
+//   // // Send 'change' event to Ecwid to record the change
+//   // document.getElementById("form-control__radio---340967026").dispatchEvent(new Event('change'));
 
-  // // Now if a customer adds this product to cart, it will be added with this user selection  
-  // el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
+//   // // Now if a customer adds this product to cart, it will be added with this user selection  
+//   // el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
 
-  // Ecwid.OnPageLoaded.add(function (page) {
-  //   if (page.type == 'PRODUCT') {
-  //     console.log("Current page is of type: " + page.type);
-  //   }
-  // });
+//   // Ecwid.OnPageLoaded.add(function (page) {
+//   //   if (page.type == 'PRODUCT') {
+//   //     console.log("Current page is of type: " + page.type);
+//   //   }
+//   // });
   
 
-  // var element = jQuery("div[class = form-control__select ]");
-  // console.log(element);
+//   // var element = jQuery("div[class = form-control__select ]");
+//   // console.log(element);
 
-  console.log("testing");
-  console.log(document);
-  console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
-  console.log(page.type); //page is undefined, hence error
-  console.log("Current page is of type: " + page.type); //page is undefined, hence error
+//   console.log("testing");
+//   console.log(document);
+//   console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
+//   console.log(page.type); //page is undefined, hence error
+//   console.log("Current page is of type: " + page.type); //page is undefined, hence error
 
 
-});
+// });
 
 console.log(document);
 console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
