@@ -7,6 +7,10 @@ Ecwid.OnAPILoaded.add(function() {
 //   Ecwid.refreshConfig();
   
   console.log("testing jquery");
+  let el = document.querySelector('input[class=".product-details-module .details-product-option .details-product-option--select .details-product-option--Luxe-kaartje-002f-Rouwlint002a"]');
+  
+  console.log(el);
+  
   console.log(document.querySelector('.details-product-option--select .form-control--select select'));
   
   // Product details page is opened
