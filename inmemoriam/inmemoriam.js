@@ -31,6 +31,9 @@ Ecwid.OnAPILoaded.add(function (page) {
 
 });
 
+console.log(document);
+console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
+
 // ______________________________________________________________
 
 //   window.ec = window.ec || Object();
