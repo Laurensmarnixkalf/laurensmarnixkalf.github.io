@@ -8,22 +8,17 @@ Ecwid.OnAPILoaded.add(function() {
   
   console.log("testing jquery");
   
-  document.addEventListener("DOMContentLoaded", function() {
     let el = document.querySelector('input[name="Kleuren Luxe rouwlint*"]');
     console.log(el);
-  });
+ 
   
-  console.log(document.querySelector('.details-product-option--select .form-control--select select'));
+  el.dispatchEvent(new Event('input', {bubbles:true, cancelable:true}));
   
-  // Product details page is opened
-// Change value of select in DOM
-document.querySelector('.details-product-option--select .form-control--select select').value = 'XLarge';
-
-// At this moment the value was changed, but Ecwid doesn't know about it. So the changes are not applied yet
-// Send 'change' event to Ecwid to record the change
-document.querySelector('.details-product-option--select .form-control--select select').dispatchEvent(new Event('change'));
-
-// Now if a customer adds this product to cart, it will be added with this user selection
+ Ecwid.OnPageLoaded.add(function(page){
+if (page.type == 'PRODUCT') {
+  	console.log("Current page is of type: " + page.type);
+}
+});
 
   
   var element = jQuery("div[class = form-control__select ]");
