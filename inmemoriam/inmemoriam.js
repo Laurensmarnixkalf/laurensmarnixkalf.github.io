@@ -1,10 +1,14 @@
 Ecwid.OnPageLoaded.add(function (page) {
 
-  //alles dat hierin staat ziet Ecwid.OnProductOptionsChanged niet
+  //alles dat hierin staat ziet Ecwid.OnProductOptionsChanged niet.
 
 });
 
 Ecwid.OnProductOptionsChanged.add(function (productid) {
+
+
+  
+  // #################### FUNCTIES #################### //
 
   function hide(classname) {
     //gegeven een classname, hide het element
@@ -15,6 +19,10 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
     //gegeven een classname, show het element
     document.getElementsByClassName(classname)[0].style.display = 'block';
   }
+
+
+
+  // #################### SET-UP #################### //
 
   //classnames van de <div> elementen die zowel Label als Select/Text bevatten van opties
   classname_luxekaartje = "details-product-option--Tekst-Luxe-kaartje002a";
@@ -28,7 +36,9 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
   hide(classname_rouwlint_2);
   hide(classname_rouwlint_3);
 
-  console.log(productid)
+
+
+  // #################### MAIN #################### //
 
   // check of rouwkaartjes/lintje gewild is
   var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
