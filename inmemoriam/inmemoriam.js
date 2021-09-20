@@ -2,6 +2,12 @@ Ecwid.OnPageLoaded.add(function (page) {
 
   //alles dat hierin staat ziet Ecwid.OnProductOptionsChanged niet.
 
+  // Hide alles op het begin
+  document.getElementsByClassName("classname_luxekaartje")[0].style.display = 'none';
+  document.getElementsByClassName("classname_rouwlint_1")[0].style.display = 'none';
+  document.getElementsByClassName("classname_rouwlint_2")[0].style.display = 'none';
+  document.getElementsByClassName("classname_rouwlint_3")[0].style.display = 'none';
+
 });
 
 Ecwid.OnProductOptionsChanged.add(function (productid) {
@@ -40,14 +46,13 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
 
   // #################### MAIN #################### //
 
+  // In time out van 100ms anders wordt verkeerde select waarde gelezen
   setTimeout(function () {
+
     // check of rouwkaartjes/lintje gewild is
     var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
 
-    console.log("extra value = " + extra.value);
-
     if (extra.value == "Geen") {
-      console.log("Geen");
       hide(classname_luxekaartje);
       hide(classname_rouwlint_1);
       hide(classname_rouwlint_2);
@@ -55,7 +60,6 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
     }
 
     if (extra.value == "Luxe kaartje (+€3.50)") {
-      console.log("Rouwkaartje");
       show(classname_luxekaartje);
       hide(classname_rouwlint_1);
       hide(classname_rouwlint_2);
@@ -63,7 +67,6 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
     }
 
     if (extra.value == "Luxe rouwlint [2 stuks] (+€17.50)") {
-      console.log("Luxe rouwlint 2 stuks");
       hide(classname_luxekaartje);
       show(classname_rouwlint_1);
       show(classname_rouwlint_2);
@@ -71,14 +74,11 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
     }
 
     if (extra.value == "Luxe rouwlint [3 stuks] (+€26.25)") {
-      console.log("Luxe rouwlint 3 stuks");
       hide(classname_luxekaartje);
       show(classname_rouwlint_1);
       show(classname_rouwlint_2);
       show(classname_rouwlint_3);
     }
   }, 100);
-
-
 
 });
