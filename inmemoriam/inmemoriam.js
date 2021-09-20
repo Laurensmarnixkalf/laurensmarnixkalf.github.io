@@ -63,10 +63,14 @@ Ecwid.OnPageLoaded.add(function (page) {
     hide(classname_rouwlint_2);
     hide(classname_rouwlint_3);
 
-    document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
+    a = 1
+
+    while(a < 1){
+      document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
     
-    // Testing scope inside product loop
-    document.addEventListener("click", console.log("you clicked"));
+      // Testing scope inside product loop
+      document.addEventListener("click", console.log("you clicked"));
+    }
   }
 });
 
