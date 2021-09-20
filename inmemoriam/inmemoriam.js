@@ -65,6 +65,8 @@ Ecwid.OnPageLoaded.add(function (page) {
 
     document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
     
+    // Testing scope inside product loop
+    document.addEventListener("click", console.log("you clicked"));
   }
 });
 
