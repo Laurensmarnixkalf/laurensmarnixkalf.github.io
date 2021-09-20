@@ -8,15 +8,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 });
 
 
-// Ecwid.OnAPILoaded.add(function (page) {
- 
-//       // do something ...
-//     console.log("Current page is of type: " + page.type);
-// //        console.log("Ecwid storefront JS API has loaded");
-// //      var x = document.getElementsByClassName("example");
-// //      var elemento = document.getElementById("form-control__radio---340967026");
-// //      console.log(elemento);
-     
+
   
 
 
@@ -31,29 +23,17 @@ Ecwid.OnPageLoaded.add(function(page) {
   // // Now if a customer adds this product to cart, it will be added with this user selection  
   // el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
 
-  // Ecwid.OnPageLoaded.add(function (page) {
-  //   if (page.type == 'PRODUCT') {
-  //     console.log("Current page is of type: " + page.type);
-  //   }
-  // });
-  
 
-  // var element = jQuery("div[class = form-control__select ]");
-  // console.log(element);
+ 
 
 //   console.log("testing inside loop");
 //   console.log(document);
 //   console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
 // });
 
-console.log("testing outside loop");
-console.log(document);
-console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
 
-console.log("testing out Ecwid variable"); //maybe we don't have the scope to access document (need access from Ecwid?), or do we need to go through storefront to get to it?
-console.log(Ecwid.document);
 
-// window.ec.storefront
+
 
 
 // ______________________________________________________________
