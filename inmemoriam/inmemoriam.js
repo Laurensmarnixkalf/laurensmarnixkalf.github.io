@@ -1,11 +1,20 @@
-Ecwid.OnAPILoaded.add(function (page) {
- 
+Ecwid.OnPageLoaded.add(function(page) {
+    if (page.type == "PRODUCT") {
       // do something ...
-    console.log("Current page is of type: " + page.type);
-//        console.log("Ecwid storefront JS API has loaded");
-//      var x = document.getElementsByClassName("example");
-//      var elemento = document.getElementById("form-control__radio---340967026");
-//      console.log(elemento);
+     var elemento = document.getElementById("form-control__radio---340967026");
+    console.log(elemento);
+  }
+});
+
+
+// Ecwid.OnAPILoaded.add(function (page) {
+ 
+//       // do something ...
+//     console.log("Current page is of type: " + page.type);
+// //        console.log("Ecwid storefront JS API has loaded");
+// //      var x = document.getElementsByClassName("example");
+// //      var elemento = document.getElementById("form-control__radio---340967026");
+// //      console.log(elemento);
      
   
 
@@ -34,7 +43,7 @@ Ecwid.OnAPILoaded.add(function (page) {
 //   console.log("testing inside loop");
 //   console.log(document);
 //   console.log(document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]'));
-});
+// });
 
 console.log("testing outside loop");
 console.log(document);
