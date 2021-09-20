@@ -1,5 +1,11 @@
 Ecwid.OnPageLoaded.add(function (page) {
 
+  //alles dat hierin staat ziet Ecwid.OnProductOptionsChanged niet
+
+});
+
+Ecwid.OnProductOptionsChanged.add(function (productid) {
+
   function hide(classname) {
     //gegeven een classname, hide het element
     document.getElementsByClassName(classname)[0].style.display = 'none';
@@ -21,10 +27,6 @@ Ecwid.OnPageLoaded.add(function (page) {
   hide(classname_rouwlint_1);
   hide(classname_rouwlint_2);
   hide(classname_rouwlint_3);
-
-});
-
-Ecwid.OnProductOptionsChanged.add(function (productid) {
 
   console.log(productid)
 
