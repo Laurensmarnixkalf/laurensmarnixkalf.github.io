@@ -3,6 +3,7 @@ Ecwid.OnPageLoaded.add(function(page) {
       // do something ...
      var elemento = document.getElementById("form-control__radio---340967026");
     console.log(elemento);
+    console.log(elemento.value);
   }
 });
 
