@@ -77,7 +77,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
       show(classname_rouwlint_2);
       show(classname_rouwlint_3);
     }
-  }, 500);
+  }, 100);
 
 
 
