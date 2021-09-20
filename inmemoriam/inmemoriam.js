@@ -47,31 +47,100 @@ Ecwid.OnPageLoaded.add(function (page) {
     }
   }
 
-  if (page.type == "PRODUCT") {
+  // if (page.type == "PRODUCT") {
 
-    console.log("in product loop");
+  //   console.log("in product loop");
 
-    //classnames van de <div> elementen die zowel Label als Select/Text bevatten van opties
-    classname_luxekaartje = "details-product-option--Tekst-Luxe-kaartje002a";
-    classname_rouwlint_1 = "details-product-option--Tekst-op-rouwlint-1002a";
-    classname_rouwlint_2 = "details-product-option--Tekst-op-rouwlint-2002a";
-    classname_rouwlint_3 = "details-product-option--Tekst-op-rouwlint-3002a";
+  //   //classnames van de <div> elementen die zowel Label als Select/Text bevatten van opties
+  //   classname_luxekaartje = "details-product-option--Tekst-Luxe-kaartje002a";
+  //   classname_rouwlint_1 = "details-product-option--Tekst-op-rouwlint-1002a";
+  //   classname_rouwlint_2 = "details-product-option--Tekst-op-rouwlint-2002a";
+  //   classname_rouwlint_3 = "details-product-option--Tekst-op-rouwlint-3002a";
 
-    //hide alles op het begin iig (straks eigenlijk netjes in de CSS doen, maar voor nu dit)
-    hide(classname_luxekaartje);
-    hide(classname_rouwlint_1);
-    hide(classname_rouwlint_2);
-    hide(classname_rouwlint_3);
+  //   //hide alles op het begin iig (straks eigenlijk netjes in de CSS doen, maar voor nu dit)
+  //   hide(classname_luxekaartje);
+  //   hide(classname_rouwlint_1);
+  //   hide(classname_rouwlint_2);
+  //   hide(classname_rouwlint_3);
 
-    a = 1
+  //   document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
 
-    while(a < 1){
-      document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
-    
-      // Testing scope inside product loop
-      document.addEventListener("click", console.log("you clicked"));
+  //   // Testing functioning of eventlistener
+  //   // Only fires ONCE? because OnPageLoaded only does so once? does it overwrite what's done here?
+  //   document.addEventListener("click", console.log("you clicked"));
+  // }
+});
+
+Ecwid.OnProductOptionsChanged.add(function () {
+
+  console.log('zit iig hierin');
+
+  function hide(classname) {
+    //gegeven een classname, hide het element
+    document.getElementsByClassName(classname)[0].style.display = 'none';
+  }
+
+  function show(classname) {
+    //gegeven een classname, show het element
+    document.getElementsByClassName(classname)[0].style.display = 'block';
+  }
+
+  function logic() {
+    console.log("in event listener loop");
+
+    // check of rouwkaartjes/lintje gewild is
+    var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+
+    if (extra.value == "Geen") {
+      console.log("Geen");
+      hide(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe kaartje") {
+      console.log("Rouwkaartje");
+      show(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [2 stuks]") {
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [3 stuks]") {
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      show(classname_rouwlint_3);
     }
   }
+
+  console.log("in product loop");
+
+  //classnames van de <div> elementen die zowel Label als Select/Text bevatten van opties
+  classname_luxekaartje = "details-product-option--Tekst-Luxe-kaartje002a";
+  classname_rouwlint_1 = "details-product-option--Tekst-op-rouwlint-1002a";
+  classname_rouwlint_2 = "details-product-option--Tekst-op-rouwlint-2002a";
+  classname_rouwlint_3 = "details-product-option--Tekst-op-rouwlint-3002a";
+
+  //hide alles op het begin iig (straks eigenlijk netjes in de CSS doen, maar voor nu dit)
+  hide(classname_luxekaartje);
+  hide(classname_rouwlint_1);
+  hide(classname_rouwlint_2);
+  hide(classname_rouwlint_3);
+
+  document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
+
+  // Testing functioning of eventlistener
+  // Only fires ONCE? because OnPageLoaded only does so once? does it overwrite what's done here?
+  document.addEventListener("click", console.log("you clicked"));
 });
 
 
