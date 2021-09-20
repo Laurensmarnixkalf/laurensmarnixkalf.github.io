@@ -1,5 +1,5 @@
 Ecwid.OnAPILoaded.add(function (page) {
-   if (page.type == "PRODUCT") {
+ 
       // do something ...
     console.log("Current page is of type: " + page.type);
 //        console.log("Ecwid storefront JS API has loaded");
@@ -7,7 +7,7 @@ Ecwid.OnAPILoaded.add(function (page) {
 //      var elemento = document.getElementById("form-control__radio---340967026");
 //      console.log(elemento);
      
-  }
+  
 
 
   // // Product details page is opened
