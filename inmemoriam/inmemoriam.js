@@ -1,5 +1,12 @@
 Ecwid.OnAPILoaded.add(function (page) {
-  // console.log("Ecwid storefront JS API has loaded");
+   if (page.type == "PRODUCT") {
+      // do something ...
+       console.log("Ecwid storefront JS API has loaded");
+     var elemento = document.getElementById("form-control__radio---340967026");
+     console.log(elemento);
+     
+  }
+
 
   // // Product details page is opened
   // // Change value of select in DOM
