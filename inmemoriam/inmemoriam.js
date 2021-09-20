@@ -71,7 +71,7 @@ Ecwid.OnPageLoaded.add(function (page) {
   // }
 });
 
-Ecwid.OnProductOptionsChanged.add(function () {
+Ecwid.OnProductOptionsChanged.addExtension(function () {
 
   console.log("onproductoptionschanged has fired");
 
@@ -108,18 +108,18 @@ Ecwid.OnProductOptionsChanged.add(function () {
     hide(classname_rouwlint_1);
     hide(classname_rouwlint_2);
     hide(classname_rouwlint_3);
-  } else if (extra.value == "Luxe kaartje") {
+  } else if (extra.value == "Luxe kaartje (+€3.50)") {
     console.log("Rouwkaartje");
     show(classname_luxekaartje);
     hide(classname_rouwlint_1);
     hide(classname_rouwlint_2);
     hide(classname_rouwlint_3);
-  } else if (extra.value == "Luxe rouwlint [2 stuks]") {
+  } else if (extra.value == "Luxe rouwlint [2 stuks] (+€17.50)") {
     hide(classname_luxekaartje);
     show(classname_rouwlint_1);
     show(classname_rouwlint_2);
     hide(classname_rouwlint_3);
-  } else if (extra.value == "Luxe rouwlint [3 stuks]") {
+  } else if (extra.value == "Luxe rouwlint [3 stuks] (+€26.25)") {
     hide(classname_luxekaartje);
     show(classname_rouwlint_1);
     show(classname_rouwlint_2);
