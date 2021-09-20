@@ -1,15 +1,13 @@
-Ecwid.OnPageLoaded.add(function(page) {
-    if (page.type == "PRODUCT") {
-      // do something ...
-     var elemento = document.getElementById("form-control__radio---340967026");
-    console.log(elemento);
-    console.log(elemento.value);
+Ecwid.OnPageLoaded.add(function (page) {
+  if (page.type == "PRODUCT") {
+    // check of rouwkaartjes/lintje gewild is
+    var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+
+    console.log("Test_value");
+    console.log(extra);
+    console.log(extra.value);
   }
 });
-
-
-
-  
 
 
   // // Product details page is opened
@@ -24,7 +22,7 @@ Ecwid.OnPageLoaded.add(function(page) {
   // el.dispatchEvent(new Event('input', { bubbles: true, cancelable: true }));
 
 
- 
+
 
 //   console.log("testing inside loop");
 //   console.log(document);
@@ -73,7 +71,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 //     Ecwid.OnPageLoaded.add(function(page) {
 //       if ('PRODUCT' == page.type) {
 //         checkExpandableOptions();
-       
+
 //         // Attach a handler to the 'expander' option
 //         jQuery("div[class *= ecwid-productoption-" + expanderOptionName + "] input[type=radio]").click(function() {
 //           checkExpandableOptions();
@@ -94,7 +92,7 @@ Ecwid.OnPageLoaded.add(function(page) {
 //     jq.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
 //     document.getElementsByTagName('head')[0].appendChild(jq);
 //   }
-  
+
 //   if (typeof jQuery == 'undefined') {  
 //     loadjQuery();
 //   } else {}
