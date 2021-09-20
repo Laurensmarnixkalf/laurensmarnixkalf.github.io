@@ -3,12 +3,14 @@ Ecwid.OnPageLoaded.add(function (page) {
   //alles dat hierin staat ziet Ecwid.OnProductOptionsChanged niet.
 
   // Hide alles op het begin
-  document.getElementsByClassName("classname_luxekaartje")[0].style.display = 'none';
-  document.getElementsByClassName("classname_rouwlint_1")[0].style.display = 'none';
-  document.getElementsByClassName("classname_rouwlint_2")[0].style.display = 'none';
-  document.getElementsByClassName("classname_rouwlint_3")[0].style.display = 'none';
+  document.getElementsByClassName("details-product-option--Tekst-Luxe-kaartje002a")[0].style.display = 'none';
+  document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-1002a")[0].style.display = 'none';
+  document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-2002a")[0].style.display = 'none';
+  document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-3002a")[0].style.display = 'none';
 
 });
+
+
 
 Ecwid.OnProductOptionsChanged.add(function (productid) {
 
