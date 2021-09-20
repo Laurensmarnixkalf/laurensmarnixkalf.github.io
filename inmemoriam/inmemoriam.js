@@ -7,7 +7,7 @@ Ecwid.OnPageLoaded.add(function (page) {
 Ecwid.OnProductOptionsChanged.add(function (productid) {
 
 
-  
+
   // #################### FUNCTIES #################### //
 
   function hide(classname) {
@@ -40,41 +40,45 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
 
   // #################### MAIN #################### //
 
-  // check of rouwkaartjes/lintje gewild is
-  var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+  setTimeout(function () {
+    // check of rouwkaartjes/lintje gewild is
+    var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
 
-  console.log("extra value = " + extra.value);
+    console.log("extra value = " + extra.value);
 
-  if (extra.value == "Geen") {
-    console.log("Geen");
-    hide(classname_luxekaartje);
-    hide(classname_rouwlint_1);
-    hide(classname_rouwlint_2);
-    hide(classname_rouwlint_3);
-  }
-  
-  if (extra.value == "Luxe kaartje (+€3.50)") {
-    console.log("Rouwkaartje");
-    show(classname_luxekaartje);
-    hide(classname_rouwlint_1);
-    hide(classname_rouwlint_2);
-    hide(classname_rouwlint_3);
-  }
-  
-  if (extra.value == "Luxe rouwlint [2 stuks] (+€17.50)") {
-    console.log("Luxe rouwlint 2 stuks");
-    hide(classname_luxekaartje);
-    show(classname_rouwlint_1);
-    show(classname_rouwlint_2);
-    hide(classname_rouwlint_3);
-  }
-  
-  if (extra.value == "Luxe rouwlint [3 stuks] (+€26.25)") {
-    console.log("Luxe rouwlint 3 stuks");
-    hide(classname_luxekaartje);
-    show(classname_rouwlint_1);
-    show(classname_rouwlint_2);
-    show(classname_rouwlint_3);
-  }
+    if (extra.value == "Geen") {
+      console.log("Geen");
+      hide(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe kaartje (+€3.50)") {
+      console.log("Rouwkaartje");
+      show(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [2 stuks] (+€17.50)") {
+      console.log("Luxe rouwlint 2 stuks");
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [3 stuks] (+€26.25)") {
+      console.log("Luxe rouwlint 3 stuks");
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      show(classname_rouwlint_3);
+    }
+  }, 500);
+
+
 
 });
