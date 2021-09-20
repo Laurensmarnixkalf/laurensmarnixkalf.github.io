@@ -1,4 +1,5 @@
 Ecwid.OnPageLoaded.add(function (page) {
+
   function hide(classname) {
     //gegeven een classname, hide het element
     document.getElementsByClassName(classname)[0].style.display = 'none';
@@ -7,6 +8,43 @@ Ecwid.OnPageLoaded.add(function (page) {
   function show(classname) {
     //gegeven een classname, show het element
     document.getElementsByClassName(classname)[0].style.display = 'block';
+  }
+
+  function logic() {
+    console.log("in event listener loop");
+
+    // check of rouwkaartjes/lintje gewild is
+    var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
+
+    if (extra.value == "Geen") {
+      console.log("Geen");
+      hide(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe kaartje") {
+      console.log("Rouwkaartje");
+      show(classname_luxekaartje);
+      hide(classname_rouwlint_1);
+      hide(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [2 stuks]") {
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      hide(classname_rouwlint_3);
+    }
+
+    if (extra.value == "Luxe rouwlint [3 stuks]") {
+      hide(classname_luxekaartje);
+      show(classname_rouwlint_1);
+      show(classname_rouwlint_2);
+      show(classname_rouwlint_3);
+    }
   }
 
   if (page.type == "PRODUCT") {
@@ -25,43 +63,8 @@ Ecwid.OnPageLoaded.add(function (page) {
     hide(classname_rouwlint_2);
     hide(classname_rouwlint_3);
 
-    document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", function () {
-      
-      console.log("in event listener loop");
-
-      // check of rouwkaartjes/lintje gewild is
-      var extra = document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]');
-
-      if (extra.value == "Geen") {
-        console.log("Geen");
-        hide(classname_luxekaartje);
-        hide(classname_rouwlint_1);
-        hide(classname_rouwlint_2);
-        hide(classname_rouwlint_3);
-      }
-
-      if (extra.value == "Luxe kaartje") {
-        console.log("Rouwkaartje");
-        show(classname_luxekaartje);
-        hide(classname_rouwlint_1);
-        hide(classname_rouwlint_2);
-        hide(classname_rouwlint_3);
-      }
-
-      if (extra.value == "Luxe rouwlint [2 stuks]") {
-        hide(classname_luxekaartje);
-        show(classname_rouwlint_1);
-        show(classname_rouwlint_2);
-        hide(classname_rouwlint_3);
-      }
-
-      if (extra.value == "Luxe rouwlint [3 stuks]") {
-        hide(classname_luxekaartje);
-        show(classname_rouwlint_1);
-        show(classname_rouwlint_2);
-        show(classname_rouwlint_3);
-      }
-    });
+    document.querySelector('[aria-label="Luxe kaartje / Rouwlint*"]').addEventListener("change", logic);
+    
   }
 });
 
