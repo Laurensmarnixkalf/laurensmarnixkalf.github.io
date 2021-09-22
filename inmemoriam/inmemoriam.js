@@ -7,14 +7,13 @@ Ecwid.OnPageLoaded.add(function (page) {
   document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-1002a")[0].style.display = 'none';
   document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-2002a")[0].style.display = 'none';
   document.getElementsByClassName("details-product-option--Tekst-op-rouwlint-3002a")[0].style.display = 'none';
+  document.getElementsByClassName("details-product-option--Kleuren-Luxe-rouwlint002a")[0].style.display = 'none';
 
 });
 
 
 
 Ecwid.OnProductOptionsChanged.add(function (productid) {
-
-
 
   // #################### FUNCTIES #################### //
 
@@ -37,12 +36,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
   classname_rouwlint_1 = "details-product-option--Tekst-op-rouwlint-1002a";
   classname_rouwlint_2 = "details-product-option--Tekst-op-rouwlint-2002a";
   classname_rouwlint_3 = "details-product-option--Tekst-op-rouwlint-3002a";
-
-  //hide alles op het begin iig (straks eigenlijk netjes in de CSS doen, maar voor nu dit)
-  hide(classname_luxekaartje);
-  hide(classname_rouwlint_1);
-  hide(classname_rouwlint_2);
-  hide(classname_rouwlint_3);
+  classname_kleurenrouwlint = "details-product-option--Kleuren-Luxe-rouwlint002a";
 
 
 
@@ -59,6 +53,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
       hide(classname_rouwlint_1);
       hide(classname_rouwlint_2);
       hide(classname_rouwlint_3);
+      hide(classname_kleurenrouwlint);
     }
 
     if (extra.value == "Luxe kaartje (+€3.50)") {
@@ -66,6 +61,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
       hide(classname_rouwlint_1);
       hide(classname_rouwlint_2);
       hide(classname_rouwlint_3);
+      hide(classname_kleurenrouwlint);
     }
 
     if (extra.value == "Luxe rouwlint [2 stuks] (+€17.50)") {
@@ -73,6 +69,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
       show(classname_rouwlint_1);
       show(classname_rouwlint_2);
       hide(classname_rouwlint_3);
+      show(classname_kleurenrouwlint);
     }
 
     if (extra.value == "Luxe rouwlint [3 stuks] (+€26.25)") {
@@ -80,6 +77,7 @@ Ecwid.OnProductOptionsChanged.add(function (productid) {
       show(classname_rouwlint_1);
       show(classname_rouwlint_2);
       show(classname_rouwlint_3);
+      show(classname_kleurenrouwlint);
     }
   }, 100);
 
